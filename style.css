@@ -1,0 +1,23 @@
+html {
+background-color: white;
+}
+
+.bg-3 {
+background-color:#FEF6AA;
+margin-top: -3%;
+max-width: 80%;
+}
+
+body {
+background-color:aliceblue;
+}
+
+li {
+line-height: 2;
+padding: 2%;
+font-family:serif;
+}
+
+#search, h3 {
+margin-left:10%;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="xApp">
+  <head>
+    <title>RestoList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="app/angular.min.js"></script>
+    <script src="app/app.js"></script>
+  </head>
+  <body>
+      <!---Navbar-->
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#">RestoList</a>
+                
+                
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">MyResto</a></li>
+                <li><a href="#">Local Places</a></li>
+                <li><a href="#">Order History</a></li>
+              </ul>
+              </div>
+              </div>
+            </div>
+        </nav>
+      <!--Navbar End-->
+      <!--Search Area-->
+        
+      <div class="container-fluid bg-3 text-center" ng-controller="RestController">
+          <h3>Search Meals By Keyword</h3>
+          <input type="text" ng-model="search" id="search" placeholder="In The Mood For...?"/>
+          <ul>
+          <li ng-repeat="x in rests | orderBy: 'price' | filter: search">
+              {{x.meal}} - {{x.price | currency: '$'}}   
+          </li>
+          </ul>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <!-----------------------------Bootstrap Scripts-------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
